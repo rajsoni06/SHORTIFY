@@ -15,7 +15,6 @@ https://github.com/rajsoni06/SHORTIFY/assets/113697967/e186c4ac-a3c4-4b40-92dd-0
 
 
 
-
 # 🔗 Mern_Stack_Url_Shortner_App
 
   <p align="center">MERN Stack Url Shortner APP</p>  
@@ -78,7 +77,7 @@ https://github.com/rajsoni06/SHORTIFY/assets/113697967/e186c4ac-a3c4-4b40-92dd-0
 
 ### License
 
-[MIT](LICENSE) © [Raj Anand Soni](https://github.com/rajsoni06)
+(LICENSE) © [Raj Anand Soni](https://github.com/rajsoni06)
 
 <br>
 
