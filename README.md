@@ -15,7 +15,6 @@ https://www.loom.com/share/ba7b855636444169aa78c4146379f67f?sid=3dd61b98-971f-45
      <img atl="MongoDB" src="https://img.shields.io/badge/-Mongodb-green?logo=mongodb&style=for-the-badge&logoColor=white">
      <img atl="ExpressJS" src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB">
      <img atl="React" src="https://img.shields.io/badge/-react-black?logo=react&style=for-the-badge">
-     <img atl="Typescript" src="https://img.shields.io/badge/-typescript-white?logo=typescript&style=for-the-badge">
      <br />
      <img atl="NodeJS" src="https://img.shields.io/badge/node.js-%2343853D.svg?style=for-the-badge&logo=node-dot-js&logoColor=white">
      <img atl="Mongoose" src="https://img.shields.io/badge/-Mongoose-brown?logo=mongoose&style=for-the-badge&logoColor=white">
