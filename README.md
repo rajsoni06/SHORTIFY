@@ -68,7 +68,7 @@ https://github.com/rajsoni06/SHORTIFY/assets/113697967/e186c4ac-a3c4-4b40-92dd-0
 
 ---
 
-<br> <br>
+<br> 
 
 <p align='center'>If you like this project do show some love by giving this repo a 🌟.</p>
   
