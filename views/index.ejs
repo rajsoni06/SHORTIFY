@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <!-- Include Font Awesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>URL Shrinker</title>
+  
+  <style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+
+body {
+    font-weight: normal; /* Remove bold style */
+}
+
+
+.container  {
+    width: 95%;
+    margin: auto;
+    background: #264653;
+    text-align: center;
+    padding: 80px 30px;
+}
+.container .heading{
+     font-size: 72px;
+     color: #e9c46a;
+}
+
+div.form{
+    padding: 30px 0;
+
+}
+div.form form input {
+    padding: 5px 30px ;
+    width: 80%;
+    font-size: 20px;
+
+}
+
+div.form form button{
+    border: 0;
+    outline: none;
+    background-color: #2a9d8f;
+    padding: 10px 24px;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* link-box */
+
+.link-box {
+    margin-top: 30px;
+    max-width: 750px;
+    margin: 10px auto;
+    display: flex;
+    flex-wrap: wrap;
+    background: #fedbfb;
+    border: 1px solid #000000;
+    border-radius: 7px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.link-box > * {
+    padding: 10px; /* Adjusted padding */
+}
+
+
+.link-box .full , .link-box .short{
+    width: 40%;
+}
+
+.link-box div a{
+    color: #264653;
+}
+
+.clicks {
+    height: 20px;
+    width: 20px;
+    background: #f1f7f6;
+    color: #1e1c1c;
+    border-radius: 50%;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+
+
+.delete span{
+  color:  #d11a2a;
+  font-size: 24px;
+}
+
+
+
+    body, html {
+      height: 100%;
+    }
+
+    body {
+      background-image: url('https://cdn.wallpapersafari.com/18/40/6jWZFw.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #000000;
+      margin: 0;
+    }
+
+    .container {
+      margin-top: 30px;
+      max-width: 600px;
+      margin: 10px auto;
+      padding: 42px;
+      background-image: url('https://w0.peakpx.com/wallpaper/323/21/HD-wallpaper-plain-white-abstract-thumbnail.jpg');
+      background-size: cover;
+      background-position: center;
+      border: 2px solid black;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      height: 300px;
+      align-items: center;
+      margin-top: 50px; /* Adjust margin-top as needed */
+    }
+
+    /* Media Query for responsiveness */
+    @media (max-width: 768px) {
+      .container {
+        width: 80%; /* Adjust width as needed */
+        padding: 20px; /* Adjust padding as needed */
+      }
+    }
+
+    @media (max-width: 576px) {
+      .container {
+        width: 90%; /* Adjust width as needed */
+        padding: 10px; /* Adjust padding as needed */
+      }
+    }
+
+    /*---------------------Footer Style-------------------------*/
+    body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #fac2bb;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+
+
+<style> /*JLPT-LEVELS Animation*/
+.ml14 {
+  font-weight: 200;
+  font-size: 3.2em;
+}
+
+.ml14 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml14 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 100% 100%;
+  bottom: 0;
+}
+
+.ml14 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+</style>
+
+
+
+<style> /*Explore Animation*/
+.ml5 {
+  position: relative;
+  font-weight: 300;
+  font-size: 4.5em;
+  color: #402d2d;
+}
+
+.ml5 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+  line-height: 1em;
+}
+
+.ml5 .line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 3px;
+  width: 100%;
+  background-color: #402d2d;
+  transform-origin: 0.5 0;
+}
+
+.ml5 .ampersand {
+  font-family: Baskerville, serif;
+  font-style: italic;
+  font-weight: 400;
+  width: 1em;
+  margin-right: -0.1em;
+  margin-left: -0.1em;
+}
+
+.ml5 .letters {
+  display: inline-block;
+  opacity: 0;
+}
+</style>
+
+ 
+<style> {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Navigation bar styling */
+  .navbar {
+    background-color: #333;
+    overflow: hidden;
+  }
+
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+
+  .dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+</style>
+
+<style>
+    .w3-button.w3-gradient-skyblue {
+        background: linear-gradient(to bottom, #87CEEB, #00BFFF);
+        color: white; /* Set text color to white for better contrast */
+    }
+</style>
+        <!-- FONTS -->
+        <style>
+        /* Using em */
+        .em-font {
+            font-size: 1.5em; /* 1.5 times the parent's font size */
+        }
+
+        /* Using rem */
+        .rem-font {
+            font-size: 1.5rem; /* 1.5 times the root font size */
+        }
+    </style>
+
+<!--NIHONGO JOURNEY ICON-->
+<style>
+        /* Add your CSS styles here */
+        .logo {
+            padding: 3px 4px;
+            font-family: Arial, sans-serif; /* Choose an appropriate font */
+            font-size: 14px;
+            font-weight: bold;
+            background: #FFC0CB;
+            cursor: pointer;
+            color: red; /* Choose an attractive color */
+            border-radius: 0px;
+            border: 3px solid Pink;
+        }
+    </style>
+
+  <!-- Images-->
+
+    <style>
+        /* CSS for responsive image */
+        .responsive-image-1 {
+            max-width: 100%;
+            height: auto;
+        }
+    </style> 
+
+
+<style>
+  .ml2 {
+  position: relative; /* Add this to make the ::before pseudo-element relative to the .ml2 element */
+  font-weight: bold;
+  font-size: 1.7em;
+  color: white;
+  text-transform: uppercase;
+}
+
+.ml2::before {
+  content: ""; /* Add content to the ::before pseudo-element */
+  position: absolute; /* Position the background label */
+  top: 130%; /* Adjust the vertical position */
+  left: 50%; /* Adjust the horizontal position */
+  transform: translate(-50%, -50%); /* Center the label */
+  background-color: rgba(0, 0, 0, 0.5); /* Background color for the label */
+  padding: 30px 50px; /* Add padding to the label */
+  border-radius: 3px; /* Add rounded corners */
+  z-index: -1; /* Place the label behind the text */
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+
+.ml2::before {
+  content: ""; /* Add content to the ::before pseudo-element */
+  position: absolute; /* Position the background label */
+  top: 50%; /* Adjust the vertical position */
+  left: 43%; /* Adjust the horizontal position */
+  transform: translate(-50%, -50%); /* Center the label */
+  background-color: rgba(0, 0, 0, 0.5); /* Background color for the label */
+  padding: 22px 135px; /* Add padding to the label */
+  border-radius: 4px; /* Add rounded corners */
+  z-index: -1; /* Place the label behind the text */
+}
+
+
+.ml3 {
+  font-weight: bold; /* Make the font bold */
+  font-size: 1.3em;
+  color: white; /* Make the color white */
+  text-transform: uppercase; /* Convert letters to uppercase */
+}
+
+
+.ml3 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+</style>
+
+
+
+<!--START NOW-->
+<style>
+        /* CSS for the button and text */
+        .button-container {
+            padding: 10px; /* Add padding to the container to control spacing */
+        }
+
+
+        .start-button {
+            padding: 7px 10px; /* Adjust padding for the button (top/bottom, left/right) */
+            font-size: 14px; /* Adjust font size for the button */
+            border: none;
+            border-radius: 5px;
+            background: linear-gradient(to right, #FFA07A, #FF6347); /* Red color */
+            color: white;
+            cursor: pointer;
+            border: 3px light red;
+            transition: background-color 0.3s;
+        }
+
+        .start-button:hover {
+            background-color: #d32f2f; /* Darker red color on hover */
+        }
+
+        /* Media query for small screens */
+        @media screen and (max-width: 600px) {
+            .start-button {
+                padding: 5px 10px; /* Reduce padding for small screens */
+            }
+        }
+    </style>
+
+<style>
+    h6 {
+        font-size: 5px; /* Adjust the value to your desired font size */
+    }
+</style>
+
+
+<style>
+    .text-center {
+        text-align: center;
+    }
+</style>
+
+
+
+<style>
+.ml11 {
+  font-weight: 700;
+  font-size: 1.4em;
+}
+
+.ml11 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml11 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #fff;
+  transform-origin: 0 50%;
+}
+
+.ml11 .line1 { 
+  top: 0; 
+  left: 0;
+}
+
+.ml11 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+</style>
+
+    <style>
+        /* CSS for responsive image */
+        .responsive-image-2 {
+            max-width: 100%;
+            height: auto;
+        }
+    </style> 
+
+<style>
+        /* CSS for responsive image */
+        .responsive-image-3 {
+            max-width: 100%;
+            height: auto;
+        }
+    </style> 
+
+
+    <style>
+        /* CSS for responsive image */
+        .responsive-image-7 {
+            max-width: 100%;
+            height: auto;
+        }
+    </style> 
+
+
+ <style>
+  .image-zoom {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-zoom img {
+  transition: transform 0.2s;
+}
+
+.image-zoom:hover img {
+  transform: scale(1.1);
+}
+  </style>
+
+
+  <!--Top-Up-->
+  <style>
+        /* CSS for the clickable top-up option */
+        .top-up-button {
+            display: inline-block;
+            padding: 8px 16px;
+            background-color: #ff9999;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .top-up-button:hover {
+            background-color: #ff6699;
+        }
+    </style>
+
+  <!--Social Media Icons-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* CSS for social media icons */
+        .spaced-icons
+        .responsive-icons
+        .social-icon {
+            font-size: 25px;
+            margin: 12px;
+        }
+    </style>
+
+
+<style>
+        /* CSS for link without underline */
+        .no-underline {
+            text-decoration: none; /* Remove underline */
+
+         /* CSS for icons */
+        .icon {
+            font-size: 23px;
+            margin: 10px;
+        }
+</style>
+    
+
+    <style>
+        /* CSS for bigger icons */
+        .bigger-icon {
+            font-size: 20px; /* Adjust the font size as needed */
+            margin: 8px; /* Add some spacing between icons */
+        }
+    </style>
+
+
+<style>
+        /* Custom classes for social icons with brand colors */
+        .facebook-icon {
+            color: #1877F2; /* Facebook's brand color */
+        }
+
+        
+  <style>
+        /* CSS for icons */
+        .social-icon {
+            padding: 10px 10px;
+            font-size: 15px;
+            margin: 10px;
+        }
+    </style>
+
+
+<style>  /*Connect with us*/
+    .w3-button {
+        padding: 10px 20px; /* Adjust the padding as needed */
+        text-align: center; /* Center the text horizontally */
+    }
+</style>
+
+
+<style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+    body, html {
+      height: 100%;
+      line-height: 1.8;
+    }
+
+    /* Full height image header */
+    .bgimg-1 {
+      background-position: center;
+      background-size: cover;
+      min-height: 100%;
+    }
+
+    .w3-bar .w3-button {
+      padding: 10px;
+    }
+
+    <style>
+  .start-button {
+    width: 150px; /* Adjust the width as needed */
+    border-radius: 7px; /* Add border radius */
+    border: none; /* Remove default button border */
+    background-color: #f3d6f0; /* Background color */
+    padding: 10px; /* Adjust padding as needed */
+  }
+  
+  .start-button a {
+    color: white; /* Set text color to white */
+    text-decoration: none; /* Remove underline */
+  }
+</style>
+
+</style>
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #f9fafa;">
+        <a class="navbar-brand" href="#" style="font-size: 20px; font-weight: bold; color: #ff6f61; text-decoration: none; padding: 2px 7px; background-color: #f3d6f0; border-radius: 5px; animation: pulse 1s infinite; border: 1px solid #ff69b4;">
+            SHORTIFY
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            &nbsp &nbsp
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="margin-right: 15px;"><b>Home</b></a>
+            </li>
+            &nbsp &nbsp
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="margin-right: 15px;"><b>About</b></a>
+            </li>
+            &nbsp &nbsp
+            <li class="nav-item">
+              <a class="nav-link" href="#" style="margin-right: 15px;"><b>Contact</b></a>
+            </li>
+          </ul>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="/login"><b>Login</b></a>
+            </li>
+            &nbsp &nbsp &nbsp 
+            <li class="nav-item">
+              <a class="nav-link" href="/signup"><b>Sign Up</b></a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    
+    <br> 
+
+    <div class="text-center">
+        <h5 class="ml11" style="font-size: 24px; font-family: Arial, sans-serif;">
+            <span class="text-wrapper">
+                <span class="line line1"></span>
+                <span class="letters" class="w3-text-black em-font responsive-image-1" class="text-center">Welcome to Shortify</span>
+            </span>
+        </h5>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <br>
+    
+        
+  <div class="container">
+    <h2>URL Shrinker</h2>
+    <form action="/shortUrls" method="POST" class="my-4 form-inline">
+      <label for="fullUrl" class="sr-only">Url</label>
+      <input required placeholder="Enter Url" type="url" name="full" id="full" class="form-control col mr-2">
+      <button class="btn btn-success" type="submit">Shrink</button>
+    </form>
+    </div>
+          
+    
+    <div class="links">
+        <div class="link-box">
+            <div class="full">
+                <h2 style="font-size: 16px; font-weight: bold;">Full Link</h2>
+            </div>
+            <div class="short">
+                <h2 style="font-size: 16px; font-weight: bold;">Short Link</h2>
+            </div>
+            <div class="click">
+                <h2 style="font-size: 16px; font-weight: bold;">Clicks</h2>
+            </div>
+        </div>
+    </div>
+    
+    
+      <%   shorturls.forEach(url => { %>
+        <div class="links">
+            <div class="link-box">
+               <div class="full">
+                  <a href="<%= url.full %>"><%= url.full %></a>
+               </div>
+               
+
+               <!-- Short Link Section -->
+<div class="short">
+    <h2 style="font-size: 16px; font-weight: bold;">Short Link</h2>
+    <div style="display: flex; align-items: center;">
+        <!-- Short Link -->
+        <a target="_blank" href="<%= url.short %>"><%= url.short %></a>
+        <!-- Clipboard Icon -->
+        <button onclick="copyToClipboard('<%= url.short %>')" style="background: none; border: none; cursor: pointer; margin-left: 5px;">
+            <i class="far fa-clipboard"></i> <!-- Clipboard Icon -->
+        </button>
+    </div>
+</div>       
+               <div class="clicks">
+                  <span><%= url.clicks %></span>
+               </div>
+               <div class="delete">
+                <a href="/delete/<%= url._id %>">
+                    <span class="material-symbols-outlined">
+                        auto_delete
+                        </span>
+                </a>
+              </div>
+            </div>
+        </div>
+      <%});  %>
+    </div>
+
+<br> <br> <br> <br> <br>  <br> <br> <br>  <br> <br> <br> <br>  <br> <br> 
+
+<!-- Contact -->
+<div class="container">
+    <div class="w3-white" id="Contact">
+      <div class="w3-container w3-padding-16 text-center">
+        <h2 class="w3-wide"><b><u>CONTACT</u></b></h2>
+        <p class="w3-opacity"><i>Please feel free to contact me!</i></p>
+        
+        <form action="/action_page.php" target="_blank">
+          <div class="form-group">
+            <input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name">
+          </div>
+          <div class="form-group">
+            <input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Query" required name="Query">
+          </div>
+          <div class="form-group">
+            <input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00">
+          </div>
+          <div class="form-group">
+            <input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message" required name="Message">
+          </div>
+          <button class="start-button">
+            <a href="https://wa.me/qr/MSECXIUNBVMMC1" class="w3-button w3-round w3-pale-red w3-block" target="_blank">SEND MESSAGE</a>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+    <!-- Clickable "Top Up" button -->
+    <a href="#" class="top-up-button">↑ Page Top</a>
+<!-- End footer -->
+ <!-- Footer -->
+ <div>
+    <footer style="text-align: center; margin-top: auto;">
+      <div class="w3-container w3-pale-red w3-center">
+        <p>Find me on social media.</p>
+        <div>
+          <a href="https://m.facebook.com/profile.php/?id=100041870123408&name=xhp_nt__fb__action__open_user" target="_blank" class="fab fa-facebook bigger-icon responsive-icons spaced-icon no-underline"></a>
+          <a href="https://www.instagram.com/lucky_sonicosmos/" target="_blank" class="fab fa-instagram bigger-icon responsive-icons spaced-icon no-underline"></a>
+          <a href="https://www.snapchat.com/add/luckysoni_cos?share_id=YX0VkbrMEII&locale=en-US" target="_blank" class="fab fa-snapchat bigger-icon responsive-icons spaced-icon no-underline"></a>
+          <a href="https://in.pinterest.com/it20097/" target="_blank" class="fab fa-pinterest bigger-icon responsive-icons spaced-icon no-underline"></a>
+          <a href="https://twitter.com/LuckySonicosmos?t=DRkKGcpRjZUthL6_DDbdIQ&s=09" target="_blank" class="fab fa-twitter bigger-icon responsive-icons spaced-icon no-underline"></a>
+          <a href="https://www.linkedin.com/in/raj-anand-soni-037541212" target="_blank" class="fab fa-linkedin bigger-icon responsive-icons spaced-icon no-underline"></a>
+        </div>
+        <br>
+        <a class="w3-button w3-round-xxlarge w3-small w3-white w3-margin-bottom responsive-icons no-underline" href="https://twitter.com/IndianEmbTokyo?t=9TKl9283oRPpKy49YyzkjQ&s=09" target="_blank"><b>CLICK HERE</b></a>
+        <br>
+        <a class="w3-button w3-round-xxlarge w3-small w3-white w3-margin-bottom responsive-icons no-underline" href="https://rajsoni06.github.io/My_Site/My_Site.html" target="_blank"><b>Connect with me</b></a> 
+      </div>
+      <br>
+      <p style="margin: 5px;">©2024 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All Rights Reserved.</p>
+      <p style="margin: 5px;">Made with ❤️ in India by Raj Anand Soni</p>
+    </footer>
+  </div>
+<br>
+
+<!------------------------------JavaScript Code------------------------->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+<script>
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml14 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml14 .line',
+    scaleX: [0,1],
+    opacity: [0.5,1],
+    easing: "easeInOutExpo",
+    duration: 900
+  }).add({
+    targets: '.ml14 .letter',
+    opacity: [0,1],
+    translateX: [40,0],
+    translateZ: 0,
+    scaleX: [0.3, 1],
+    easing: "easeOutExpo",
+    duration: 800,
+    offset: '-=600',
+    delay: (el, i) => 150 + 25 * i
+  }).add({
+    targets: '.ml14',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+  </script>
+
+
+<script>
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml5 .line',
+    opacity: [0.5,1],
+    scaleX: [0, 1],
+    easing: "easeInOutExpo",
+    duration: 700
+  }).add({
+    targets: '.ml5 .line',
+    duration: 600,
+    easing: "easeOutExpo",
+    translateY: (el, i) => (-0.625 + 0.625*2*i) + "em"
+  }).add({
+    targets: '.ml5 .ampersand',
+    opacity: [0,1],
+    scaleY: [0.5, 1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5 .letters-left',
+    opacity: [0,1],
+    translateX: ["0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=300'
+  }).add({
+    targets: '.ml5 .letters-right',
+    opacity: [0,1],
+    translateX: ["-0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+
+
+<script>
+function myFunction() {
+  var x = document.getElementById("demo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+
+
+
+<script>
+// Wrap every letter in a span
+var textWrapper = document.querySelector('.ml11 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml11 .line',
+    scaleY: [0,1],
+    opacity: [0.5,1],
+    easing: "easeOutExpo",
+    duration: 700
+  })
+  .add({
+    targets: '.ml11 .line',
+    translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 10],
+    easing: "easeOutExpo",
+    duration: 700,
+    delay: 100
+  }).add({
+    targets: '.ml11 .letter',
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=775',
+    delay: (el, i) => 34 * (i+1)
+  }).add({
+    targets: '.ml11',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+
+
+ <script src="app.js"></script>
+
+
+<script>
+  // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml3');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml3 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 70*i
+  }).add({
+    targets: '.ml3',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+  </script>
+
+  <!-- JavaScript Function for Copying to Clipboard -->
+<script>
+    function copyToClipboard(text) {
+        const textarea = document.createElement('textarea');
+        textarea.value = text;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+        alert('Copied to clipboard: ' + text);
+    }
+</script>
+</body>
+</html>
