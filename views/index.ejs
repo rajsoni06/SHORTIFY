@@ -20,7 +20,7 @@
  
 
 body {
-    font-weight: normal; /* Remove bold style */
+    font-weight: normal; 
 }
 
 
@@ -65,8 +65,8 @@ div.form form button{
     border-radius: 50%;
     margin: 0 20px;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    justify-content: center; 
+    align-items: center; 
 }
 
 
@@ -115,21 +115,20 @@ div.form form button{
       justify-content: flex-end;
       height: 300px;
       align-items: center;
-      margin-top: 50px; /* Adjust margin-top as needed */
+      margin-top: 50px;
     }
 
-    /* Media Query for responsiveness */
     @media (max-width: 768px) {
       .container {
-        width: 80%; /* Adjust width as needed */
-        padding: 20px; /* Adjust padding as needed */
+        width: 80%; 
+        padding: 20px; 
       }
     }
 
     @media (max-width: 576px) {
       .container {
-        width: 90%; /* Adjust width as needed */
-        padding: 10px; /* Adjust padding as needed */
+        width: 90%;
+        padding: 10px; 
       }
     }
 
@@ -299,7 +298,6 @@ div.form form button{
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <br>
-    
         
   <div class="container">
     <h2>URL Shrinker</h2>
@@ -310,7 +308,6 @@ div.form form button{
     </form>
     </div>
           
-    
     <div class="links">
         <div class="link-box">
             <div class="full">
@@ -325,14 +322,12 @@ div.form form button{
         </div>
     </div>
     
-    
       <%   shorturls.forEach(url => { %>
         <div class="links">
             <div class="link-box">
                <div class="full">
                   <a href="<%= url.full %>"><%= url.full %></a>
-               </div>
-               
+               </div>    
 
                <!-- Short Link Section -->
 <div class="short">
@@ -419,13 +414,11 @@ div.form form button{
   </div>
 <br>
 
-<!------------------------------JavaScript Code------------------------->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
 
 <script>
-// Wrap every letter in a span
 var textWrapper = document.querySelector('.ml14 .letters');
 textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
@@ -499,7 +492,6 @@ anime.timeline({loop: true})
     delay: 1000
   });
 </script>
-
 
  <script src="app.js"></script>
 
