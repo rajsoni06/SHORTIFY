@@ -26,14 +26,14 @@ https://github.com/rajsoni06/SHORTIFY/assets/113697967/ac1a682e-c003-4916-8ba1-1
 - A complete MERN stack project.
 
 <p align="center">
-     <img atl="MongoDB" src="https://img.shields.io/badge/-Mongodb-green?logo=mongodb&style=for-the-badge&logoColor=white">
-     <img atl="ExpressJS" src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB">
-     <img atl="React" src="https://img.shields.io/badge/-react-black?logo=react&style=for-the-badge">
-     <br />
-     <img atl="NodeJS" src="https://img.shields.io/badge/node.js-%2343853D.svg?style=for-the-badge&logo=node-dot-js&logoColor=white">
-     <img atl="Mongoose" src="https://img.shields.io/badge/-Mongoose-brown?logo=mongoose&style=for-the-badge&logoColor=white">
-     <img alt="tailwindcss" src="https://img.shields.io/badge/-tailwind-yellow?logo=tailwindcss&style=for-the-badge">
-    
+    <img alt="MongoDB" src="https://img.shields.io/badge/-Mongodb-green?logo=mongodb&style=for-the-badge&logoColor=white">
+    <img alt="ExpressJS" src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB">
+    <img alt="React" src="https://img.shields.io/badge/-react-black?logo=react&style=for-the-badge">
+    <br />
+    <img alt="NodeJS" src="https://img.shields.io/badge/node.js-%2343853D.svg?style=for-the-badge&logo=node-dot-js&logoColor=white">
+    <img alt="Mongoose" src="https://img.shields.io/badge/-Mongoose-brown?logo=mongoose&style=for-the-badge&logoColor=white">
+    <img alt="tailwindcss" src="https://img.shields.io/badge/-tailwind-yellow?logo=tailwindcss&style=for-the-badge">
+    <img alt="Django" src="https://img.shields.io/badge/Django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white">
 </p>
   
 ---  
